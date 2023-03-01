@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <div class="guess">
+      <button class="guess__btn guess__back-btn">Back to menu</button>
+
+      <div class="guess__field guess__menu">
+        <h1 class="guess__title">
+          Hello, let's play guess the number game! <br />Who guesses?
+        </h1>
+        <div class="guess__menu-btns">
+          <button class="guess__btn guess__btn-me">me</button>
+          <button class="guess__btn guess__btn-you">you</button>
+        </div>
+      </div>
+
+      <div class="guess__field guess__user">
+        <h1 class="guess__title">
+          I'm thinking of number 1 - 100. <br />
+          Can you guess it?
+        </h1>
+        <input type="text" class="guess__user-input" placeholder="Num" />
+        <div class="guess__user-btns">
+          <button class="guess__btn guess__btn-user">Guess</button>
+        </div>
+
+        <div class="guess__textbox">
+          <p class="guess__amount">Number of guesses: <span>0</span></p>
+          <p class="guess__guesses">Guessed numbers: <span>none</span></p>
+        </div>
+      </div>
+
+      <div class="guess__field guess__bot">
+        <h1 class="guess__title">
+          Think of number 1 - 100 <br />
+          I will try to guess!
+        </h1>
+
+        <div class="guess__bot-number">
+          I think your number is <span>0</span>
+        </div>
+
+        <div class="guess__bot-btns">
+          <button class="guess__btn guess__bot-ready">Get my guess</button>
+          <div class="guess__bot-hints">
+            <button class="guess__btn guess__btn-lesser"><</button>
+            <button class="guess__btn guess__btn-correct">correct</button>
+            <button class="guess__btn guess__btn-greater">></button>
+          </div>
+        </div>
+
+        <div class="guess__textbox">
+          <p class="guess__amount">Number of guesses: <span>0</span></p>
+          <p class="guess__guesses">Guessed numbers: <span>none</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
