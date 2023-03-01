@@ -25,7 +25,6 @@
           <button class="guess__btn guess__btn-you">you</button>
         </div>
       </div>
-
       <div class="guess__field guess__user">
         <h1 class="guess__title">
           I'm thinking of number 1 - 100. <br />
@@ -35,8 +34,8 @@
         <div class="guess__user-btns">
           <button class="guess__btn guess__btn-user">Guess</button>
         </div>
-
         <div class="guess__textbox">
+          <p class="guess__user-hint"></p>
           <p class="guess__amount">Number of guesses: <span>0</span></p>
           <p class="guess__guesses">Guessed numbers: <span>none</span></p>
         </div>
@@ -47,13 +46,11 @@
           Think of number 1 - 100 <br />
           I will try to guess!
         </h1>
-
         <div class="guess__bot-number">
           I think your number is <span>0</span>
         </div>
-
         <div class="guess__bot-btns">
-          <button class="guess__btn guess__bot-ready">Get my guess</button>
+          <button class="guess__btn guess__btn-ready">Get my guess</button>
           <div class="guess__bot-hints">
             <button class="guess__btn guess__btn-lesser"><</button>
             <button class="guess__btn guess__btn-correct">correct</button>
@@ -62,8 +59,9 @@
         </div>
 
         <div class="guess__textbox">
-          <p class="guess__amount">Number of guesses: <span>0</span></p>
-          <p class="guess__guesses">Guessed numbers: <span>none</span></p>
+          <p class="guess__bot-hint"></p>
+          <p class="guess__bot-amount">Number of guesses: <span>0</span></p>
+          <p class="guess__bot-guesses">Guessed numbers: <span>none</span></p>
         </div>
       </div>
     </div>

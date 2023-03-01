@@ -61,7 +61,7 @@ body {
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
 }
 
-.guess__bot-ready {
+.guess__btn-ready {
   margin-bottom: 5px;
 }
 
@@ -100,4 +100,9 @@ body {
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.guess__user-hint {
+  margin-bottom: 15px;
+  color: #663399;
 }
