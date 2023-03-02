@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RGBA slider</title>
+  </head>
+  <body>
+    <div class="color-slider">
+      <div class="color-slider__wrapper">
+        <div class="color-slider__slide">
+          R<input
+            type="range"
+            class="color-slider__input color-slider__input--red"
+            min="0"
+            max="255"
+            value="0" />
+        </div>
+        <div class="color-slider__slide">
+          G<input
+            type="range"
+            class="color-slider__input color-slider__input--green"
+            min="0"
+            max="255"
+            value="0" />
+        </div>
+        <div class="color-slider__slide">
+          B<input
+            type="range"
+            class="color-slider__input color-slider__input--blue"
+            min="0"
+            max="255"
+            value="0" />
+        </div>
+        <div class="color-slider__slide">
+          A<input
+            type="range"
+            class="color-slider__input color-slider__input--alpha"
+            min="0"
+            max="100"
+            value="100" />
+        </div>
+        <button class="color-slider__output">rgb(0,0,0)</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
