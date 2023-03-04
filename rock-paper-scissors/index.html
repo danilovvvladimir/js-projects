@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="rock-paper-scissors">
+      <div class="rock-paper-scissors__score">
+        <p class="rock-paper-scissors__score-computer">
+          Computer: <span>0</span>
+        </p>
+        <p class="rock-paper-scissors__score-user">You: <span>0</span></p>
+      </div>
+      <div class="rock-paper-scissors__weapons">
+        <button class="rock-paper-scissors__btn rock-paper-scissors__btn--rock">
+          <img
+            src="./rock.svg"
+            alt="rock"
+            class="rock-paper-scissors__btn-img" />
+        </button>
+        <button
+          class="rock-paper-scissors__btn rock-paper-scissors__btn--paper">
+          <img
+            src="./paper.svg"
+            alt="paper"
+            class="rock-paper-scissors__btn-img" />
+        </button>
+        <button
+          class="rock-paper-scissors__btn rock-paper-scissors__btn--scissors">
+          <img
+            src="./scissors.svg"
+            alt="scissors"
+            class="rock-paper-scissors__btn-img" />
+        </button>
+      </div>
+      <div class="rock-paper-scissors__info">
+        <p class="rock-paper-scissors__info-computer">
+          Computer choose <span></span>
+        </p>
+        <p class="rock-paper-scissors__info-user">You choose <span></span></p>
+        <p class="rock-paper-scissors__info-result"></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
