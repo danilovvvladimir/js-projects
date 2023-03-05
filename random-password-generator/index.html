@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Password Generator</title>
+  </head>
+  <body>
+    <div class="random-password-generator">
+      <div class="random-password-generator__top">
+        <input type="text" class="random-password-generator__input" />
+        <div class="random-password-generator__btns">
+          <button
+            class="random-password-generator__btn random-password-generator__btn--copy">
+            <img
+              src="./copy.svg"
+              alt=""
+              class="random-password-generator__img" />
+          </button>
+          <button
+            class="random-password-generator__btn random-password-generator__btn--refresh">
+            <img
+              src="./random.svg"
+              alt=""
+              class="random-password-generator__img" />
+          </button>
+        </div>
+      </div>
+      <div class="random-password-generator__admin">
+        <input
+          type="range"
+          class="random-password-generator__range"
+          min="8"
+          max="50"
+          value="8" />
+        <h3 class="random-password-generator__length">8</h3>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 63, 237, 1),
+    rgba(0, 133, 234, 1)
+  );
+}
+
+.random-password-generator {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1c1e21;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  padding: 80px 30px;
+}
+.random-password-generator__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.random-password-generator__input {
+  color: #e1e1e1;
+  font-family: "Roboto Mono", monospace;
+  padding: 20px 5px;
+  font-size: 18px;
+  height: 35px;
+  width: 75%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e2e2e2;
+  letter-spacing: 2px;
+}
+.random-password-generator__btns {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.random-password-generator__btn {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  transition: transform 0.3s ease;
+}
+.random-password-generator__btn:active {
+  transform: scale(0.95);
+}
+.random-password-generator__btn img {
+  height: 100%;
+}
+.random-password-generator__range {
+  display: block;
+}
+
+.random-password-generator__admin {
+  display: flex;
+  align-items: center;
+}
+.random-password-generator__range {
+  width: 85%;
+  appearance: none;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  height: 3px;
+}
+
+.random-password-generator__length {
+  margin-left: auto;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  text-align: center;
+  width: 35px;
+  padding: 5px 0;
+  display: inline-block;
+}
