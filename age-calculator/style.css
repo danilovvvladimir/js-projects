@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 111, 226, 1),
+    rgba(0, 190, 226, 1)
+  );
+}
+
+.age-calculator {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.age-calculator__input-wrapper {
+  background-color: #000;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.age-calculator__input-date {
+  font-family: "Roboto Mono", monospace;
+  width: 60%;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 10px 5px;
+  border: none;
+}
+.age-calculator__btn {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  width: 20%;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.age-calculator__output-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.age-calculator__output {
+  margin: 0 15px;
+  text-align: center;
+  background-color: #000;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
