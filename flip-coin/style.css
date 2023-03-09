@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(255, 174, 0, 1), #fff) fixed;
+}
+
+.flip-coin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  border-radius: 10px;
+  padding: 50px 0;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto Mono", monospace;
+  background-color: #fff;
+}
+.flip-coin__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 50px auto;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.flip-coin__coin img {
+  width: 145px;
+}
+.flip-coin__coin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-coin__coin--tails {
+  transform: rotateX(180deg);
+}
+@keyframes flip-tails {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(1980deg);
+  }
+}
+
+@keyframes flip-heads {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(2160deg);
+  }
+}
+
+.flip-coin__btn {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2.5px solid #424ae0;
+  background-color: #424ae0;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+.flip-coin__btn:disabled {
+  background-color: #e1e0ee;
+  border-color: #e1e8ee;
+  color: #101020;
+}
