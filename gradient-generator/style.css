@@ -32,7 +32,7 @@ body {
   margin: 0 20px;
   background-color: transparent;
   width: 100px;
-  height: 45px;
+  height: 100px;
   appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -95,6 +95,7 @@ body {
 }
 .gradient-generator__output-textarea {
   background-color: #f0f2fc;
+  font-size: 18px;
   resize: none;
   color: #000;
   padding: 10px 20px;

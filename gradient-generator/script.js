@@ -1,40 +1,77 @@
-// logic: на каждую кнопку свой обработчик события(мб делегированием), и передавать первым арументом
-// data direction mb??
+"use strict";
 
-const outputTextarea = document.querySelector(
-  ".gradient-generator__output-textarea"
-);
-const copyBtn = document.querySelector(".gradient-generator__output-copybtn");
-
-function handleDirectionSetting() {
+function generateGradiend() {
+  const copyBtn = document.querySelector(".gradient-generator__output-copybtn");
   const arrowsBtns = document.querySelectorAll(".gradient-generator__dir-btn");
-  let direction = "up";
-  hideActiveClass();
-  arrowsBtns[0].classList.add("active");
+  const colorInputs = document.querySelectorAll(
+    ".gradient-generator__input-color"
+  );
+  const outputTextarea = document.querySelector(
+    ".gradient-generator__output-textarea"
+  );
 
+  let direction = "to top";
+  handleDirectionSetting();
+  generateCode(outputTextarea);
+  colorInputs.forEach((item) => {
+    item.addEventListener("input", () => generateCode(outputTextarea));
+  });
   arrowsBtns.forEach((item) => {
-    item.addEventListener("click", setDirection);
+    item.addEventListener("click", () => generateCode(outputTextarea));
   });
 
-  function setDirection(e) {
+  copyBtn.addEventListener("click", () => copyText(outputTextarea, copyBtn));
+
+  function handleDirectionSetting() {
     hideActiveClass();
-    showActiveClass(e.currentTarget);
-    direction = e.currentTarget.getAttribute("data-direction");
-    console.log(direction);
+    arrowsBtns[0].classList.add("active");
+
+    arrowsBtns.forEach((item) => {
+      item.addEventListener("click", setDirection);
+    });
+
+    function setDirection(e) {
+      hideActiveClass();
+      showActiveClass(e.currentTarget);
+      direction = e.currentTarget.getAttribute("data-direction");
+    }
+
+    function hideActiveClass() {
+      arrowsBtns.forEach((item) => {
+        item.classList.remove("active");
+      });
+    }
+
+    function showActiveClass(neededItem) {
+      arrowsBtns.forEach((item, index) => {
+        if (neededItem == item) {
+          arrowsBtns[index].classList.add("active");
+        }
+      });
+    }
   }
 
-  function hideActiveClass() {
-    arrowsBtns.forEach((item) => {
-      item.classList.remove("active");
-    });
+  function getInputsColor(colorInputs) {
+    return [colorInputs[0].value, colorInputs[1].value];
   }
-  function showActiveClass(neededItem) {
-    arrowsBtns.forEach((item, index) => {
-      if (neededItem == item) {
-        arrowsBtns[index].classList.add("active");
-      }
-    });
+
+  function generateCode(output) {
+    const [colorOne, colorTwo] = getInputsColor(colorInputs);
+
+    output.value = `background-image: linear-gradient(${direction}, ${colorOne}, ${colorTwo});`;
+    document.body.style.cssText += output.value;
+  }
+
+  function copyText(output, copyBtn) {
+    output.select();
+    document.execCommand("copy");
+    output.blur();
+    const btnText = copyBtn.textContent;
+    copyBtn.textContent = "COPIED";
+    setTimeout(() => {
+      copyBtn.textContent = btnText;
+    }, 3000);
   }
 }
 
-handleDirectionSetting();
+generateGradiend();
