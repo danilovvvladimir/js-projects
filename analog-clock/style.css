@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #2f20fe, #fc42ff);
+  font-family: "Roboto Mono", monospace;
+}
+
+.analog-clock {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #16191e;
+  border: 15px solid #242931;
+  box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.analog-clock__digits {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.analog-clock__digit {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+}
+.analog-clock__digit--12 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.analog-clock__digit--3 {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+.analog-clock__digit--6 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.analog-clock__digit--9 {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+}
+.analog-clock__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.analog-clock__hands {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.analog-clock__hand {
+  background-color: #fff;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  transform-origin: bottom;
+}
+
+.analog-clock__hand--hours {
+  height: 70px;
+  width: 8px;
+  top: 65px;
+}
+.analog-clock__hand--minutes {
+  height: 80px;
+  width: 4px;
+  top: 55px;
+}
+.analog-clock__hand--seconds {
+  height: 100px;
+  width: 2px;
+  top: 35px;
+  background-color: #0b9bf4;
+}
