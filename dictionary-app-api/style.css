@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #ae9cff;
+  font-family: "Roboto Mono", monospace;
+}
+.dictionary {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 80px 50px;
+  box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dictionary__search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dictionary__search-input {
+  padding: 5px;
+  width: 70%;
+  border: none;
+  border-bottom: 3px solid #ae9cff;
+}
+.dictionary__search-btn {
+  font-family: "Roboto Mono", monospace;
+  background-color: #ae9cff;
+  width: 25%;
+  padding: 15px 0;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+.dictionary__result {
+  display: none;
+}
+
+.dictionary__result-word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.dictionary__result-word-title {
+  font-size: 30px;
+  color: #1f194c;
+}
+.dictionary__result-sound-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.dictionary__result-sound-btn svg {
+  fill: #1f194c;
+}
+
+.dictionary__result-details {
+  display: flex;
+  color: #b3b6d4;
+  gap: 10px;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+}
+
+.dictionary__result-meaning {
+  color: #575a7b;
+  margin-bottom: 30px;
+}
+.dictionary__result-example {
+  color: #575a7b;
+  padding-left: 20px;
+  border-left: 5px solid #ae9cff;
+  font-style: italic;
+}
