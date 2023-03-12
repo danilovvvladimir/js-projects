@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drawing App</title>
+  </head>
+  <body>
+    <div class="drawing">
+      <div class="drawing__area">
+        <canvas class="drawing__canvas"></canvas>
+      </div>
+      <div class="drawing__options">
+        <div class="drawing__tools tools">
+          <div class="tools__row">
+            <div class="tools__wrapper">
+              <h5><span class="tools__type"></span>Size:</h5>
+              <input type="range" value="4" class="tools__pen-slide" />
+            </div>
+            <div class="tools__wrapper">
+              <h5>Color:</h5>
+              <input type="color" class="tools__color-input" />
+            </div>
+            <div class="tools__wrapper">
+              <h5>Background Color:</h5>
+              <input type="color" class="tools__background-input" />
+            </div>
+          </div>
+          <div class="tools__row">
+            <button class="tools__btn tools__btn-clear">Clear</button>
+            <button class="tools__btn tools__btn-pen">Pen</button>
+            <button class="tools__btn tools__btn-erase">Erase</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
