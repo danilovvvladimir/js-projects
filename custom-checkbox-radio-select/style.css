@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Checkbox */
+/* appearance none для чекбоксов, position absolute */
+/* стилизую before у лейбла с начальным состоянием checkbox'a*/
+/* через обращение к checked у чекбокс меняю состояние у следующего элемента(label):before*/
+/*      .checkbox__input:checked + .checkbox__label:before*/
+
+.checkbox {
+  position: relative;
+}
+.checkbox__input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.checkbox__label {
+  font-size: 1rem;
+  color: #444;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.checkbox__label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  z-index: 1;
+  background: url(./images/off.svg);
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+  background: url(./images/on.svg);
+}
+
+.checkbox__input:focus + .checkbox__label:before {
+  background: url(./images/off-focused.svg);
+}
+
+.checkbox__input:checked:focus + .checkbox__label:before {
+  background: url(./images/on-focused.svg);
+}
+
+/* Myself Checkbox */
+
+.checkbox__myself-input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+.checkbox__myself-label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.checkbox__myself-label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+  background: url(./images/off.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox__myself-input:checked + .checkbox__myself-label:before {
+  background: url(./images/on.svg);
+}
+
+.checkbox__myself-input:focus + .checkbox__myself-label:before {
+  background: url(./images/off-focused.svg);
+}
+
+.checkbox__myself-input:focus:checked + .checkbox__myself-label:before {
+  background: url(./images/on-focused.svg);
+}
+
+/* Radio Button */
+
+.radiobtn__input {
+  /* appearance: none;
+  -webkit-appearance: none;
+  position: absolute; */
+}
+
+.radiobtn__label {
+  position: relative;
+  padding-left: 20px;
+}
+
+.radiobtn__label:before,
+.radiobtn__label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.radiobtn__label:before {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+.radiobtn__label:after {
+  left: calc(5px / 2);
+  width: 5px;
+  height: 5px;
+  background-color: tomato;
+  z-index: 2;
+  display: none;
+}
+
+.radiobtn__input:checked + .radiobtn__label::after {
+  display: block;
+}
+
+/* https://www.youtube.com/watch?v=NBb2OV2iQCw&ab_channel=BrainsCloud */
+/* https://www.youtube.com/watch?v=_f036OpnuWo&ab_channel=OnlineTutorials */
